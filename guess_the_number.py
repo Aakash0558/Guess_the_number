@@ -15,6 +15,7 @@ def game_mode(number, mode):
       attempts -= 1
       if attempts == 0:
         print("You've run out of guesses, you lose.")
+        print(f"The correct number was {number}.")
       else:
         print("Guess again.")
     elif guess > number:
@@ -22,6 +23,7 @@ def game_mode(number, mode):
       attempts -= 1
       if attempts == 0:
         print("You've run out of guesses, you lose.")
+        print(f"The correct number was {number}.")
       else:
         print("Guess again.")
     elif guess < number:
@@ -29,10 +31,11 @@ def game_mode(number, mode):
       attempts -= 1
       if attempts == 0:
         print("You've run out of guesses, you lose.")
+        print(f"The correct number was {number}.")
       else:
         print("Guess again.")
     elif guess == number:
-      print(f"You got it! The answer was {guess}.")
+      print(f"You got it! The number was {guess}.")
       attempts = 0
 
 print(logo)

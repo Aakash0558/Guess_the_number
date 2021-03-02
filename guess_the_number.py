@@ -1,15 +1,6 @@
 import random
 from art import logo
 
-print(logo)
-
-print("Welcome to the Number Guessing Game!")
-print("I'm thinking of a number between 1 and 100.")
-
-number = random.randint(1,100)           #Generate random number between 1 and 100
-
-print(f"Pssst, the correct answer is {number}")   #just for testing purposes
-
 def easy_mode(number, mode):
   #function for easy mode
   attempts = 10
@@ -74,6 +65,15 @@ def hard_mode(number, mode):
     elif guess == number:
       print(f"You got it! The answer was {guess}.")
       attempts = 0
+
+print(logo)
+
+print("Welcome to the Number Guessing Game!")
+print("I'm thinking of a number between 1 and 100.")
+
+number = random.randint(1,100)           #Generate random number between 1 and 100
+
+print(f"Pssst, the correct answer is {number}")   #just for testing purposes
 
 game_running = True
 

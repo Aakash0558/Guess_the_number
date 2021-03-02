@@ -38,24 +38,31 @@ def game_mode(number, mode):
       print(f"You got it! The number was {guess}.")
       attempts = 0
 
-print(logo)
+def guess_the_number():
+  print(logo)
 
-print("Welcome to the Number Guessing Game!")
-print("I'm thinking of a number between 1 and 100.")
+  print("Welcome to the Number Guessing Game!")
+  print("I'm thinking of a number between 1 and 100.")
 
-number = random.randint(1,100)           #Generate random number between 1 and 100
+  number = random.randint(1,100)           #Generate random number between 1 and 100
 
-print(f"Pssst, the correct answer is {number}")   #just for testing purposes
+  print(f"Pssst, the correct answer is {number}")   #just for testing purposes
 
-game_running = True
+  game_running = True
 
-while game_running is True:
-  mode = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
-  if mode == "easy":
-    game_mode(number, mode)
-    game_running = False
-  elif mode == "hard":
-    game_mode(number, mode)
-    game_running = False
-  else:
-    print("Your input is wrong, try again!")
+  while game_running is True:
+    mode = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
+    if mode == "easy":
+      game_mode(number, mode)
+      game_running = False
+    elif mode == "hard":
+      game_mode(number, mode)
+      game_running = False
+    else:
+      print("Your input is wrong, try again!")
+
+guess_the_number()
+while input("Would you like to play again? y to play again: ").lower()=='y':
+  #whether user wants to restart the game or not
+  clear()
+  guess_the_number()
